@@ -12,6 +12,14 @@ class SumFinderTest(TestCase):
     def test_same_data_exist(self):
         self.assertEqual(find_target([3, 3, 3, 3], 6), [0, 1])
 
+    # Правильный набор данных, искомое число может быть составлено из отрицательных чисел
+    def test_neg_data_exist(self):
+        self.assertEqual(find_target([1, 4, -3, 6], 1), [1, 2])
+
+    # Правильный набор данных, искомое число может быть составлено из
+    def test_zero_data_exist(self):
+        self.assertEqual(find_target([0, 6, 7, 8], 8), [0, 3])
+
     # Правильный набор данных, искомое число не может быть составлено
     def test_ordinary_data_none(self):
         self.assertIsNone(find_target([2, 7, 11, 15], 10), None)
@@ -30,4 +38,3 @@ class SumFinderTest(TestCase):
 
 if __name__ == '__main__':
     main()
-    
