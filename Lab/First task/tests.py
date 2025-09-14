@@ -16,7 +16,7 @@ class SumFinderTest(TestCase):
     def test_neg_data_exist(self):
         self.assertEqual(find_target([1, 4, -3, 6], 1), [1, 2])
 
-    # Правильный набор данных, искомое число может быть составлено из
+    # Правильный набор данных, искомое число может быть составлено из нуля и другого числа
     def test_zero_data_exist(self):
         self.assertEqual(find_target([0, 6, 7, 8], 8), [0, 3])
 
@@ -26,7 +26,7 @@ class SumFinderTest(TestCase):
 
     # Длина списка меньше двух
     def test_small_data(self):
-        self.assertIsNone(find_target([2, 7, 11, 15], 10), None)
+        self.assertIsNone(find_target([2], 10), None)
 
     # Аргументы поданы неправильно
     def test_wrong_data_type(self):
