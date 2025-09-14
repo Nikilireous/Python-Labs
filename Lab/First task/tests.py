@@ -30,10 +30,10 @@ class SumFinderTest(TestCase):
 
     # Аргументы поданы неправильно
     def test_wrong_data_type(self):
-        self.assertIsInstance(find_target(['1', '1', '1', '1'], 2), str)
+        self.assertRaises(TypeError, find_target, ['1', '1', '1', '1'], 2)
 
     def test_wrong_target_type(self):
-        self.assertIsInstance(find_target([1, 1, 1, 1], '2'), str)
+        self.assertRaises(TypeError, find_target, [1, 1, 1, 1], '2')
 
 
 if __name__ == '__main__':
