@@ -9,16 +9,16 @@ def number_guesser(to_guess: int, left_border: int | list[int] | tuple[int],
     :return: Угаданное число и количество шагов угадывания
     """
     if not isinstance(to_guess, int):
-        raise TypeError("Первый параметр обязан быть целым числом")
+        raise TypeError("Параметр to_guess обязан быть целым числом")
     if not isinstance(left_border, int) and not isinstance(left_border, list) and not isinstance(left_border, tuple):
-        raise TypeError("Второй параметр должен быть целым числом или массивом чисел")
+        raise TypeError("Параметр left_border должен быть целым числом или массивом чисел")
 
     all_numbers: list[int] = []
     if isinstance(left_border, int):
         if not isinstance(right_border, int):
-            raise TypeError("Третий параметр обязан быть целым числом")
+            raise TypeError("Параметр right_border обязан быть целым числом")
         if left_border > right_border:
-            raise ValueError("Второй параметр должен быть не больше третьего")
+            raise ValueError("Параметр left_border должен быть не больше right_border")
 
         # Формирует список чисел
         all_numbers: list[int] = [i for i in range(left_border, right_border + 1)]
