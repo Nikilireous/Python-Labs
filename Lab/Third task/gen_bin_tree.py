@@ -3,7 +3,7 @@ def gen_bin_tree(root: int = 4, height: int = 4) -> dict | Exception:
     Создать бинарное дерево
 
     :param root: -- указатель корня
-    :param height: -- количество ярусов дерева (целое число от нуля)
+    :param height: -- высота генерируемого дерева (целое число от единицы)
     :return: Созданное бинарное дерево в виде словаря
     """
     if isinstance(root, int) and isinstance(height, int):
