@@ -60,7 +60,7 @@ if __name__ == "__main__":
 ![Google_Colab_result](images/Colab_result.png)
 
 ## Результат исполнения кода на персональном компьютере
-![Google_Colab_result](images/PC_result.png)
+![PC_result](images/PC_result.png)
 
 # Вывод:
 Как показало два теста, итеративный вариант кода гораздо быстрее рекурсивного.
